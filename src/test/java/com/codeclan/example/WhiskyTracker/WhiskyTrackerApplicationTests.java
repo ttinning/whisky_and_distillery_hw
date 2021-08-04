@@ -43,8 +43,7 @@ public class WhiskyTrackerApplicationTests {
 
 	@Test
 	public void findWhiskyFromDistilleryAtSpecificAge() {
-		Distillery distillery = distilleryRepository.getOne(8L);
-		List<Whisky> foundWhiskies = whiskyRepository.findWhiskyByDistilleryAndAgeGreaterThan(distillery, 11);
+		List<Whisky> foundWhiskies = whiskyRepository.findWhiskyByDistilleryIdAndAgeGreaterThan(8L, 11);
 		assertEquals(2, foundWhiskies.size());
 	}
 
